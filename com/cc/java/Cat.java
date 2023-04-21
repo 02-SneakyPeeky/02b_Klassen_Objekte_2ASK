@@ -5,7 +5,8 @@ public class Cat {
   private String name;
   private String furColor;
   private int age; 
-  private boolean isFemale; 
+  private boolean isFemale;
+  private int counter;  
 
   public Cat(String name, String furColor, int age,boolean isFemale) {
       this.name = name;
@@ -13,7 +14,6 @@ public class Cat {
       this.age = age;
       this.isFemale = isFemale;
      }
-
   
     public String getStringAttributes(String op) {
         switch (op) {
@@ -30,18 +30,18 @@ public class Cat {
   public String getAge() {
    if (isFemale){
     return checkEscalationLevel();}
-    else {
-      return String.valueOf(age);
-    }
+   else {
+    return String.valueOf(age);
    }
+  }
 
-   private String checkEscalationLevel() {
+  private String checkEscalationLevel() {
 
-    int counter = 4;
+    counter++;
     
     switch (counter) {
       case 1:
-      return "This is an inappropriate question!";
+        return "This is an inappropriate question!";
       case 2: 
         return "I've told you once!";
       case 3: 
